@@ -8,7 +8,7 @@ meta_text=''
 waitempty, waitfullstop, waitchar=0,0,0
 import subprocess
 
-def espeak(text: str, speed: int=2, pitch: int=50) -> int:
+def espeak(text: str, speed: int=125, pitch: int=50) -> int:
     """ Use espeak to convert text to speech. """
     return subprocess.run(['espeak', f'-s {speed} -p {pitch}', text]).returncode
 

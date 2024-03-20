@@ -24,12 +24,12 @@ def metaphone(word):
     # Use the sub function to remove double consonants while preserving double vowels
     word = re.sub(pattern, r'\1', word)
     meta=doublemetaphone(word)[0].lower()
-    print(meta)       ###
+    #print(meta)       ###
     if meta[0]=='a' and meta!='a':
         meta=meta[1:]
     else:
         meta=meta
-    print(meta)       ###
+    # print(meta)       ###
     vowels = "aeiouwxy"
 
     # Combine consonants from Metaphone and vowels from the word
@@ -40,7 +40,7 @@ def metaphone(word):
     # Use the sub function to replace all "sh," "th," or "ch" with "q"
     word = re.sub(pattern2,'q', word)
 
-    print(word)    ### 
+    # print(word)    ### 
     if len(word)==1:
         word=word
     elif word[:2]=='wh':
@@ -81,7 +81,7 @@ def metaphone(word):
             word='n'+word[2:]
         else:
             word=word
-    print(word)   ###
+    # print(word)   ###
     for char in word:
         if char in vowels:
         # If the character is a vowel, add a vowel from the original word
@@ -119,7 +119,7 @@ def linearize(sentence):
     punctuation=['',' ','.','!',',',', ','?',';',':','"','" ','" ','"']
     parts = re.split(r'(\s+|\W)', sentence)
     converted_sentence,error_count = '',0
-    print(parts)   ###
+    # print(parts)   ###
     exceptional_list_dict={
         'dough':'dou',
         'w':'dablu',
@@ -141,7 +141,7 @@ def linearize(sentence):
                 converted_sentence += part
         else:
             converted_sentence += exceptional_list_dict[part]
-    print(converted_sentence, error_count)  ###
+    # print(converted_sentence, error_count)  ###
     return converted_sentence
 def display_metaword(metaword):
     #create a mouthdict dictionary having png files for each alphabet
@@ -184,7 +184,7 @@ def display_metaword(metaword):
     for char in metaword:
         if char in mouthdict:
             mouth=mouthdict[char]
-            print(mouth)
+            # print(mouth)
             cv2.imshow(f"{char}", cv2.imread("./images/"+mouth))
             cv2.waitKey(100)
             

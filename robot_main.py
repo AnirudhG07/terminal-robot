@@ -2,7 +2,8 @@ import cv2
 import _thread
 from robotspeech import linearize
 
-text=input("Enter text: ")
+print("Input sentence for the robot:")
+text=input()
 meta_text=''
 waitempty, waitfullstop, waitchar=0,0,0
 import subprocess

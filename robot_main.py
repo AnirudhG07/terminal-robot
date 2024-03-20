@@ -7,14 +7,14 @@ meta_text=''
 waitempty, waitfullstop, waitchar=0,0,0
 import subprocess
 
-def espeak(text: str, pitch: int=50) -> int:
+def espeak(text: str, speed: int=2, pitch: int=50) -> int:
     """ Use espeak to convert text to speech. """
-    return subprocess.run(['espeak', f'-p {pitch}', text]).returncode
+    return subprocess.run(['espeak', f'-s {speed} -p {pitch}', text]).returncode
 
 _thread.start_new_thread(espeak, (text,) )
-meta_text='         '+linearize(text)+'          '
+meta_text='         '+linearize(text)+'              '
 print(meta_text)
-waitchar,waitfullstop,waitempty=40,30,30 
+waitchar,waitfullstop,waitempty=90,60,60 
 
 mouthdict={
     ' ':'robot_m.png',

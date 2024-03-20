@@ -13,7 +13,7 @@ def espeak(text: str, speed: int=2, pitch: int=50) -> int:
 
 _thread.start_new_thread(espeak, (text,) )
 meta_text='         '+linearize(text)+'              '
-print(meta_text)
+# print(meta_text)
 waitchar,waitfullstop,waitempty=90,60,60 
 
 mouthdict={
@@ -54,23 +54,23 @@ for char in meta_text:
     if char in mouthdict:
         if char==' ':
             mouth=mouthdict[char]
-            print(mouth)
+            # print(mouth)
             cv2.imshow(f"{char}", cv2.imread("./images/"+mouth))
             cv2.waitKey(waitempty) 
             cv2.destroyAllWindows()
         elif char in ['.','!','?']:
             mouth=mouthdict[char]
-            print(mouth)
+            # print(mouth)
             cv2.imshow(f"{char}", cv2.imread("./images/"+mouth))
             cv2.waitKey(8*waitfullstop) 
             cv2.destroyAllWindows()
         elif char in [',',', ']:
-            mouth=mouthdict[char]
+            # mouth=mouthdict[char]
             print(mouth)
             cv2.imshow(f"{char}", cv2.imread("./images/"+mouth))
             cv2.waitKey(waitfullstop*4) 
         else:
             mouth=mouthdict[char]
-            print(mouth)
+            # print(mouth)
             cv2.imshow(f"{char}", cv2.imread("./images/"+mouth))
             cv2.waitKey(waitchar)

@@ -8,6 +8,11 @@ Follow the given steps and get yourself a talking robot-
 2. Install dependencies in your environment
 3. run the python program using `python3 robot_main.py`
 
+# Features You can change
+1. You can always change features of the robot's voice like voice type, speed, pitch, etc.
+2. If you don't like the robot, go to the cloned repository and change the images according to your mouth settings. Don't forget to rename the pics as given.
+3. Write a shell script and make an alias so as to not always run here and there for the robot.
+   
 # Dependencies
 ```bash
 python3 -m pip install opencv-python

@@ -6,12 +6,21 @@ You can easily run the python code. Enter the text you would like the robot to s
 Follow the given steps and get yourself a talking robot-
 1. git clone the repository in your home
 2. Install dependencies in your environment
-3. run the python program using `python3 robot_main.py`
+3. In home directory, paste the terminal-robot.sh file
+4. Follow the below commands one by one to create an alias for it, to never run the python files
+```bash
+# STEP 1
+open ~/.zshrc  # OR open ~/.bashrc
+# STEP 2 - Paste the below at the end of the file (or anywhere)
+alias terminal-robot='bash terminal-robot.sh'
+# STEP 3 - Save the file with Cmd S or Ctrl S. Reopen the Terminal and...
+# STEP 4
+terminal-robot 
+```
 
 # Features You can change
 1. You can always change features of the robot's voice like voice type, speed, pitch, etc.
 2. If you don't like the robot, go to the cloned repository and change the images according to your mouth settings. Don't forget to rename the pics as given.
-3. Write a shell script and make an alias so as to not always run here and there for the robot.
    
 # Dependencies
 ```bash

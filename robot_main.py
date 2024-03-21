@@ -13,9 +13,9 @@ def espeak(text: str, speed: int=125, pitch: int=50) -> int:
     return subprocess.run(['espeak', f'-s {speed} -p {pitch}', text]).returncode
 
 _thread.start_new_thread(espeak, (text,) )
-meta_text='         '+linearize(text)+'              '
+meta_text=linearize(text)+'              '
 # print(meta_text)
-waitchar,waitfullstop,waitempty=80,60,60 
+waitchar,waitfullstop,waitempty=60,60,60 
 
 mouthdict={
     ' ':'robot_m.png',

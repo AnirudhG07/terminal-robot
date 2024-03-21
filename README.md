@@ -2,6 +2,8 @@
 The terminal-robot is a fun feature you can add to your terminal to get a speaking robot.
 You can easily run the python code. Enter the text you would like the robot to say and it will speak in a robotic-y voice with mouth movements!
 
+https://github.com/AnirudhG07/terminal-robot/assets/146579014/24712b57-227b-43e6-8079-54b76c5e3959
+
 # How to use
 Follow the given steps and get yourself a talking robot-
 1. git clone the repository in your home

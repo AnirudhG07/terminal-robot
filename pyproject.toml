@@ -1,10 +1,11 @@
 [project]
 name = "terminal-robot"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "A fun cool speaking robot right in your terminal."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "click>=8.1.7",
     "metaphone>=0.6",
     "multithreading>=0.2.0",
     "opencv-python>=4.10.0.84",
@@ -12,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-hello = "terminal_robot.robot_main:main"
+terminal-robot = "terminal_robot.main:main"
 
 [build-system]
 requires = ["hatchling"]

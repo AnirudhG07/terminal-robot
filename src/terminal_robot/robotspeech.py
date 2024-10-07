@@ -1,14 +1,16 @@
+import os
 import re
 
 import cv2
 from metaphone import doublemetaphone
+
+IMAGE_DIR = os.path.join(os.path.dirname(__file__), "images")
 
 
 def exceptional_handling(excep_list: list, word):
     for exc in excep_list:
         if exc in word:
             return False
-            break
     return True
 
 
@@ -190,7 +192,7 @@ def display_metaword(metaword):
         if char in mouthdict:
             mouth = mouthdict[char]
             # print(mouth)
-            cv2.imshow(f"{char}", cv2.imread("./images/" + mouth))
+            cv2.imshow(f"{char}", cv2.imread(os.path.join(IMAGE_DIR, mouth)))
             cv2.waitKey(100)
 
             cv2.destroyAllWindows()

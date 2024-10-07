@@ -41,8 +41,19 @@ And you are good to go!
 
 ## Features You can change
 
-1. You can always change features of the robot's voice like voice type, speed, pitch, etc.
-2. If you don't like the robot, go to the cloned repository and change the images according to your mouth settings. Don't forget to rename the pics as given.
+You can always change features of the robot voice like speed and pitch. You can change it using the `--speed` and `--pitch` flags.
+
+1. Speed - You can change the speed of the robot voice by changing the speed value. The default value is 150. You can change it by running -
+
+```bash
+terminal-robot speak --speed 200
+```
+
+2. Pitch - You can change the pitch of the robot voice by changing the pitch value. The default value is 50. You can change it by running -
+
+```bash
+terminal-robot speak --pitch 100
+```
 
 ## Dependencies
 

@@ -1,0 +1,19 @@
+[project]
+name = "terminal-robot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "metaphone>=0.6",
+    "multithreading>=0.2.0",
+    "opencv-python>=4.10.0.84",
+    "thread>=2.0.5",
+]
+
+[project.scripts]
+hello = "terminal_robot.robot_main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
